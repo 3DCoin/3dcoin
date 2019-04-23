@@ -286,7 +286,8 @@ public:
         return  nActiveStateIn == MASTERNODE_ENABLED ||
                 nActiveStateIn == MASTERNODE_PRE_ENABLED ||
                 nActiveStateIn == MASTERNODE_EXPIRED ||
-                nActiveStateIn == MASTERNODE_WATCHDOG_EXPIRED;
+                nActiveStateIn == MASTERNODE_WATCHDOG_EXPIRED ||
+                nActiveStateIn == MASTERNODE_NEW_START_REQUIRED;
     }
 
     bool IsValidForPayment()
