@@ -230,7 +230,7 @@ bool WinnerIsmine(CMutableTransaction txNew, const CBlockIndex* pindexPrev) {
 
     CScript payee;
 
-    payee = txNew.vout[1].scriptPubKey;
+    payee = txNew.vout[0].scriptPubKey;
 
     CTxDestination address1;
     ExtractDestination(payee, address1);
@@ -243,7 +243,7 @@ bool WinnerIsmine(CMutableTransaction txNew, const CBlockIndex* pindexPrev) {
     
     CKey key;
     if (pwalletMain->GetKey(keyID, key)){
-        LogPrintf("CMasternodePayments::FillBlockPayee -- Private key available for %s\n", address2.ToString());
+        LogPrintf("CMasternodePayments::FillBlockPayee -- The address is mine(localMN) %s\n", address2.ToString());
         return true;
     }
 
@@ -351,6 +351,7 @@ void CMasternodePayments::FillBlockPayee(CMutableTransaction& txNew, int nBlockH
 
     // split reward between miner ...
     txNew.vout[0].nValue -= masternodePayment;
+    txNew.vout.pop_back();
 
     // add masternode vout
     txoutMasternodeRet = CTxOut(masternodePayment, payee);

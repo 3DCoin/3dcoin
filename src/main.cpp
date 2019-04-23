@@ -3786,9 +3786,9 @@ bool CheckBlock(const CBlock& block, CValidationState& state, bool fCheckPOW, bo
 
 bool CheckV014Block(const CChainParams& chainparams, const CBlock& block, CValidationState& state)
 {
-        if (!block.vtx[0].IsCoinBaseNew())
+        /*if (!block.vtx[0].IsCoinBaseNew())
             return state.DoS(100, error("CheckBlock(): first tx is not v014 coinbase"),
-                             REJECT_INVALID, "bad-v014cb-missing");
+                             REJECT_INVALID, "bad-v014cb-missing");*/
 
         //V014-TODO add Proof of Sync validation after the complete implementation
 
