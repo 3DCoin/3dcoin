@@ -548,7 +548,7 @@ UniValue getblock(const UniValue& params, bool fHelp)
         return strHex;
     }
 
-    return blockToJSON(block, pblockindex);
+    return blockToJSON(block, pblockindex, true);
 }
 
 UniValue gettxoutsetinfo(const UniValue& params, bool fHelp)
