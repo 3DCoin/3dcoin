@@ -1,9 +1,18 @@
-3DCoin Core staging tree 0.14.1
+3DCoin Core staging tree 0.15.1
 ===============================
+Links:
 Web wallet: https://3dcoin.online
 Website: https://www.3dcoin.io
 Forum : https://3dctalk.net
 Explorer: https://3dcstats.net
+Coingecko: https://www.coingecko.com/en/coins/3dcoin
+CMC: https://coinmarketcap.com/currencies/3dcoin/
+Masternode host: https://cryptotophost.com/coin/3dc/
+
+
+
+
+
 
 UNIX BUILD NOTES
 ====================
